@@ -6,7 +6,6 @@ return {
       vim.keymap.set('n', '<leader>ff', ':Telescope find_files<CR>', {})
       vim.keymap.set('n', '<leader>fg', ':Telescope live_grep<CR>', {})
       vim.keymap.set('n', '<leader>fb', ':Telescope buffers<CR>', {})
-      vim.keymap.set('n', '<leader>fh', ':Telescope help_tags<CR>', {})
 
       vim.keymap.set('n', '<leader>gs', ':Telescope git_status<CR>', {})
       vim.keymap.set('n', '<leader>gb', ':Telescope git_branches<CR>', {})
