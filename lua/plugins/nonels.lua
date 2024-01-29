@@ -6,7 +6,8 @@ return {
 			sources = {
 				null_ls.builtins.formatting.stylua,
 				null_ls.builtins.diagnostics.eslint,
-				null_ls.builtins.completion.spell,
+				-- This line surface a bunch of useless Text auto-completions that pollutes the results
+				-- null_ls.builtins.completion.spell,
 
 				null_ls.builtins.formatting.clang_format,
 				null_ls.builtins.formatting.black,
