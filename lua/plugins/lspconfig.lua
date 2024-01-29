@@ -68,6 +68,7 @@ return {
 
       local lspconfig = require("lspconfig")
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
+      -- This helps get rid off the warning
       capabilities.offsetEncoding = { "utf-16" }
 
       local on_attach_clangd = function(client, bufnr)
