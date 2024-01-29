@@ -96,6 +96,24 @@ return {
         capabilities = capabilities,
       })
 
+      -- .mlir file
+      local on_attach_mlir = function(client, bufnr)
+        -- Enable completion triggered by <c-x><c-o>
+        vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
+
+        -- Mappings.
+        -- See `:help vim.lsp.*` for documentation on any of the below functions.
+        local bufopts = { noremap = true, silent = true, buffer = bufnr }
+        vim.keymap.set("n", "gd", vim.lsp.buf.definition, bufopts)
+        vim.keymap.set("n", "gr", vim.lsp.buf.references, bufopts)
+      end
+
+      vim.cmd("au BufRead,BufNewFile *.mlir set filetype=mlir")
+      lspconfig.mlir_lsp_server.setup({
+        on_attach = on_attach_mlir,
+        cmd = { "/data/yuzhliu/latest/build-debug/bin/nn-mlir-lsp-server" },
+        filetypes = { "mlir" },
+      })
     end,
   },
 }
