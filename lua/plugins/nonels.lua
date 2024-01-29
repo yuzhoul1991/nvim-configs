@@ -13,12 +13,7 @@ return {
 				null_ls.builtins.diagnostics.flake8,
 				null_ls.builtins.formatting.isort,
 
-				null_ls.builtins.diagnostics.cspell,
-				null_ls.builtins.code_actions.cspell,
-
 				null_ls.builtins.completion.luasnip,
-
-        null_ls.builtins.diagnostics.cppcheck,
 			},
 		})
 	end,
