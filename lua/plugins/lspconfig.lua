@@ -109,7 +109,7 @@ return {
         vim.keymap.set("n", "gr", vim.lsp.buf.references, bufopts)
       end
 
-      vim.cmd("au BufRead,BufNewFile *.mlir set filetype=mlir")
+      -- vim.cmd("au BufRead,BufNewFile *.mlir set filetype=mlir")
       lspconfig.mlir_lsp_server.setup({
         on_attach = on_attach_mlir,
         cmd = { "/data/yuzhliu/latest/build-debug/bin/nn-mlir-lsp-server" },
